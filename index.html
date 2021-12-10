@@ -1,128 +1,93 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Tnput in Javascript</title>
-
- <style>
- body {font-family: Arial, Helvetica, sans-serif;}
- * {box-sizing: border-box;}
- 
- input[type=text], select, textarea {
- width: 100%;
- padding: 12px;
- border: 1px solid #ccc;
- border-radius: 4px;
- box-sizing: border-box;
- margin-top: 6px;
- margin-bottom: 16px;
- resize: vertical;
- }
- 
- input[type=submit] {
- background-color: #04AA6D;
- color: white;
- padding: 12px 20px;
- border: none;
- border-radius: 4px;
- cursor: pointer;
- }
- 
- input[type=submit]:hover {
- background-color: #45a049;
- }
- 
- .container {
- border-radius: 5px;
- background-color: #f2f2f2;
- padding: 20px;
- }
- button{
- background-color: #04AA6D;
- color: white;
- padding: 12px 20px;
- border: none;
- border-radius: 4px;
- cursor: pointer;}
-
- </style>
-
-
-
-
-</head>
-<body>
- <p>Tecnologia Responsive</p>
- <ol>
- <li>Si ridimensiona allo schermo del device</li>
- <li>Utilizzato per la navigazione da cellullare</li>
- <li>Un Must per gli sviluppatori moderni</li>
- <li>Lezione sugli INPUT con Javascript</li>
- 
- </ol>
-<div class="container">
- <form id="frm1" >
- <label for="soggetto">Soggetto</label>
- <input id="soggetto" type="text" name="soggetto" value=""><br>
- <label for="verbo">Verbo</label>
- <input id ="verbo" type="text" name="verbo" value=""><br>
- <label for="complementooggetto">Complemento Oggetto</label>
- <input id="co" type="text" name="Complemento Oggetto" value=""><br><br>
- <!-- <input type="submit" value="Submit"> -->
- 
- </form>
-
- <button onclick="CreaUnaFrase()">Crea una frase</button>
-
- <p>Soggetto:</p>
- <p id="inputsoggetto"></p>
- <p>Verbo:</p>
- <p id="inputverbo"></p>
- <p>Complemento Oggetto:</p>
- <p id="inputCO"></p>
- 
-
- <p>Frase finale</p>
- <p id="out"></p>
-
-
-<script>
-
-
-
-
-function CreaUnaFrase() {
-let soggetto="";
-let verbo="";
-let complementooggetto="";
-
-soggetto=document.getElementById('soggetto').value;
-document.getElementById('inputsoggetto').innerHTML=soggetto;
-
-verbo=document.getElementById('verbo').value;
-document.getElementById('inputverbo').innerHTML=verbo;
-
-
-complementooggetto=document.getElementById('co').value;
-document.getElementById('inputCO').innerHTML=complementooggetto;
-
-let frase="";
-frase=soggetto+ " "+verbo+ " "+complementooggetto;
-
-document.getElementById('out').innerHTML=frase;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
 }
 
+.navbar {
+overflow: hidden;
+background-color: #333;
+}
 
+.navbar a {
+float: left;
+font-size: 16px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
 
-</script>
+.subnav {
+float: left;
+overflow: hidden;
+}
 
+.subnav .subnavbtn {
+font-size: 16px;
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
 
+.navbar a:hover, .subnav:hover .subnavbtn {
+background-color: red;
+}
 
- </div>
+.subnav-content {
+display: none;
+position: absolute;
+left: 0;
+background-color: red;
+width: 100%;
+z-index: 1;
+}
 
+.subnav-content a {
+float: left;
+color: white;
+text-decoration: none;
+}
 
+.subnav-content a:hover {
+background-color: #eee;
+color: black;
+}
+
+.subnav:hover .subnav-content {
+display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<a href="#home">Home</a>
+<div class="subnav">
+<button class="subnavbtn">Esercizi<i class="fa fa-caret-down"></i></button>
+<div class="subnav-content">
+<a href="./Form responsive Copiare codice.html">Responsive</a>
+<a href="./Codice responsive input javascript.html">Dislivello</a>
+</div>
+</div>
+<a href="niccolo.berardi@jcmaxwell.it">Contact</a>
+</div>
 
 
 
 </body>
 </html>
+ 
+
+
+
