@@ -16,6 +16,10 @@
     
     <button id="button2" onclick="Lancia10Dadi(10)">Lancia 10 dadi</button>
     <p id="output2"></p>
+
+    <button id="button3" onclick="Lancia1000Dadi(1000)">Lancia 1000 dadi</button>
+    <p id="output3"></p>
+    
     
     <script>
         function LancioDado() {
@@ -23,7 +27,7 @@
             let casuale=0;
             casuale=Math.random();
             dado=Math.round(casuale*5)+1;
-            document.getElementById("output1").innerHTML=dado+ "<br>";
+            document.getElementById("output1").innerHTML=dado+ "";
         }
         
         function Lancia10Dadi(n) {
@@ -34,11 +38,51 @@
             {
             casuale=Math.random();
             dado=Math.round(casuale*5)+1;
-            str=str+" "+ dado+"<br>";   
+            str=str+" "+ dado+"";   
             }
             document.getElementById("output2").innerHTML=str;
         }
+        function Lancia1000Dadi(n) {
+            let dado=0;
+            let casuale=0;
+            let str="";
+            for(let i=0;i<n;i++)
+            {
+            casuale=Math.random();
+            dado=Math.round(casuale*5)+1;
+            str=str+" "+ dado+"";   
+            }
+            document.getElementById("output3").innerHTML=str;
+        }
+    
     </script>
 
+    <style>
+        #button1{
+    color: black;
+    background-color: pink;
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    border: outset purple 1px;
+}
+
+#button2{
+    color: rgba(255, 0, 0, 0);
+    background-color: rgb(255, 0, 0);
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    border: outset crimson 1px;
+}
+#button3{
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    border: outset crimson 1px;
+}
+    </style>
 </body>
 </html>
