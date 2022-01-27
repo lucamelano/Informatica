@@ -16,8 +16,34 @@
           items.push(boxvalue);
           console.log(items);
           str=str+","+boxvalue
-
         }
-    </script>
+  document.getElementById('out').innerHTML=items;
+        return false;
+    }
+
+    function printArray(){
+        let str="";
+        for(let i=0;i<items.length;i++)
+        {
+            str=str+" "+items[i].value;
+        }
+        return str;
+    }
+
+        </script>
+
+
+        <form onsubmit="return inputToArray()">
+            <p>Please insert the items
+                </p>
+                <input type="text" id="box">
+                <input type="submit" value="Submit">
+
+                </form>
+                <p id="out"></p>
+
+
+
+
   </body>
 </html>
