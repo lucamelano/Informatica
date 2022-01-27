@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"
-    <meta name="viewport" content="width", initial-scale=1.0>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
-  </head>
-  <body>
-    <script>
-        let parolacce = ['bastardo','cazzo','stronzo','minchia']
-        function inputToArray() {
-          let str="";
-          let boxvalue="";
-          boxvalue = document.getElementById
-          items.push(boxvalue);
-          console.log(items);
-          str=str+","+boxvalue
-        }
-  document.getElementById('out').innerHTML=items;
+</head>
+<body>
+<script> 
+     let items = ['cazzo','vaffanculo','stronzo','bastardo','minchia']
+    function inputToArray() {
+        let str="";
+        let boxvalue="";
+        boxvalue = document.getElementById('box').value
+        items.push(boxvalue);
+        console.log(items);
+        str=str+","+boxvalue;
+        document.getElementById('out').innerHTML=items;
         return false;
     }
 
@@ -43,7 +41,5 @@
                 <p id="out"></p>
 
 
-
-
-  </body>
+</body>
 </html>
