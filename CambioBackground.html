@@ -10,8 +10,49 @@
          background-color:rgb(4, 128, 0);
          width :200px;
          height:  200px;
-         
+         border: 1px solid black;
         } 
+        
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #1e3ef4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 30px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
  </style>
      
  
@@ -25,7 +66,8 @@
     <p id="out">0.0</p>
     <p id="nclick">0</p>
     
-    <button type="button" onclick="count()">cliccammi</button>
+    <button class="button" style="vertical-align:middle"onclick="count()"><span> Cliccami </span></button>
+
     
     </div>
    
@@ -33,6 +75,9 @@
       let i = 0;
       let start = Date.now();
       let counter = 0;
+     
+
+      
       function count() {
         document.getElementById("out").innerHTML +=
           " " + (Date.now() - start) + " ms";
