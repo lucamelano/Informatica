@@ -8,9 +8,18 @@
  <style>
  #fufi{
  visibility: hidden;
+ color:red;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+ 
  }
  #boh {
  visibility: hidden;
+ color: red
+ -moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
  }
  </style>
  </head>
@@ -24,7 +33,7 @@
  <p id="demolition">3</p>
  <p id="boh">13</p>
 
- <button id="fufi" type="button" onclick="count()"> CLICCAMI</button>
+ <button id="fufi" type="button" onclick="count()">NON SMETTERE DI CLICCARE</button>
 
  <script>
  let i = 0;
@@ -53,7 +62,7 @@
  function fill() {
  clearInterval(myInterval)
  clearInterval(Pollo)
- document.getElementById("demolition").innerHTML = "VAI CAVALLO!";
+ document.getElementById("demolition").innerHTML = "SPINGERE CAVALLO";
  document.getElementById("fufi").style.visibility = "visible";
  document.getElementById("boh").style.visibility = "visible";
  
@@ -73,6 +82,9 @@
 
 
  
+
+
+
  </script>
  </body>
 </html
