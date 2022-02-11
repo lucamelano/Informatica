@@ -1,92 +1,90 @@
+
+
+---------- Forwarded message ---------
+Da: Simone Barletta <simone.barletta@jcmaxwell.it>
+Date: ven 11 feb 2022 alle ore 10:10
+Subject: gg
+To: Marco Zanon <marco.zanon@jcmaxwell.it>
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
  <style>
-     #div{
-         background-color:rgb(4, 128, 0);
-         width :200px;
-         height:  200px;
-         border: 1px solid black;
-        } 
-        
-.button {
-  display: inline-block;
-  border-radius: 2px;
-  background-color: #1e3ef4;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 30px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 2px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
+ #fufi{
+ visibility: hidden;
+ }
+ #boh {
+ visibility: hidden;
+ }
  </style>
-     
+ </head>
+ <body>
  
-</head>
-  <body>
-    <div id="div">
-   
-    <p id="demo">
-      Questa pagina conta quanto tempo ci metti a premere il bottone e cambia colore delllo sfondo
-    </p>
-    <p id="out">0.0</p>
-    <p id="nclick">0</p>
-    
-    <button class="button" style="vertical-align:middle"onclick="count()"><span> Cliccami </span></button>
 
-    
-    </div>
-   
-    <script>
-      let i = 0;
-      let start = Date.now();
-      let counter = 0;
-     
+ 
+ 
+ <p id="out">Times</p>
+ <p id="nclick">Clicks</p>
+ <p id="demolition">3</p>
+ <p id="boh">13</p>
 
-      
-      function count() {
-        document.getElementById("out").innerHTML +=
-          " " + (Date.now() - start) + " ms";
-        counter++;
-        document.getElementById("nclick").innerHTML = counter.toString();
-       
-        document.getElementById("div").style.backgroundColor = "red";
-    
-    }
-    </script>
-  </body>
+ <button id="fufi" type="button" onclick="count()">Push Me</button>
+
+ <script>
+ let i = 0;
+ let start = Date.now();
+ let CosoClick = 0;
+ const myInterval = setInterval(pippo,1000);
+ const Interval = setInterval(tonno,1000);
+ const NonSo = setInterval(Rubik,13000);
+ const Pollo = setInterval(fill,3000);
+ var contatore = 3;
+ var bolo = 13;
+ 
+
+ function count() {
+ document.getElementById("out").innerHTML =
+ " " + (Date.now() - start) + " ms";
+ CosoClick++;
+ document.getElementById("nclick").innerHTML = CosoClick.toString();
+ }
+
+ function pippo() {
+ contatore--;
+ document.getElementById("demolition").innerHTML = contatore+" ";
+ }
+ 
+ function fill() {
+ clearInterval(myInterval)
+ clearInterval(Pollo)
+ document.getElementById("demolition").innerHTML = "Via!";
+ document.getElementById("fufi").style.visibility = "visible";
+ document.getElementById("boh").style.visibility = "visible";
+ 
+ }
+
+ function tonno() {
+ bolo--;
+ document.getElementById("boh").innerHTML = bolo+" ";
+ }
+
+ function Rubik() {
+ document.getElementById("boh").style.visibility = "hidden";
+ document.getElementById("fufi").style.visibility = "hidden";
+ document.getElementById("demolition").style.visibility = "hidden";
+ document.getElementById("out").style.visibility = "hidden";
+ }
+
+
+ 
+
+
+
+ </script>
+ </body>
 </html>
