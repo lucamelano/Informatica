@@ -1,0 +1,35 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class id="out"></div>
+    <div class id="out1"></div>
+    <div class id="out2"></div>
+
+
+
+
+    <script>
+        let arrayBro = [[],[],[]];
+        for(i=0; i<10; i++){
+            arrayBro[0].push(parseInt(Math.random()*10));
+        }
+        for(i=0; i<arrayBro[0].length; i++){
+            arrayBro[1].push(parseInt(Math.random()*10));
+        }
+        for(i=0; i<arrayBro[1].length; i++){
+            arrayBro[2].push(parseInt(Math.random()*10));
+        }
+        document.getElementById("out").innerHTML=arrayBro [0] [2];
+        document.getElementById("out1").innerHTML=arrayBro [1] [2];
+        document.getElementById("out2").innerHTML=arrayBro [2] [2];
+
+    </script>
+    
+</body>
+</html>
